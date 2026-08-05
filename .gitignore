@@ -1,0 +1,68 @@
+# =========================
+# Build outputs / binaries
+# =========================
+kvserver
+benchmark_ycsb
+*.out
+*.exe
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+
+# Build directories
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# =========================
+# KVStore runtime data
+# =========================
+data/
+*.log
+*.wal
+*.sst
+*.db
+
+# Temporary compaction files
+*.tmp
+*.temp
+
+# =========================
+# Benchmark generated files
+# =========================
+benchmark/results/
+*.csv
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+
+# =========================
+# Debug / profiling
+# =========================
+*.dSYM/
+*.gcda
+*.gcno
+*.prof
+*.profraw
+*.profdata
+
+# =========================
+# Misc
+# =========================
+core
+core.*

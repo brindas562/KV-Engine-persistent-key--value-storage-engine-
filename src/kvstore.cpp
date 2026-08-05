@@ -185,11 +185,15 @@ void KVStore::rebuildkeydirinternal(){
               if(!in.read(&key[0],keylen)) break;
               if(!in.read(&val[0],vallen))break;
               keyDir[key]=offset;
+              memTable[key]=val;
 
               //cout << "Recovered "<< key<< " at "<< offset<< endl;
 
 
         }
+        if (memTable.size() >= FLUSH_THRESHOLD) {
+            flushToSSTable();}
+            
     }
 void KVStore::rebuildkeydir(){
 
